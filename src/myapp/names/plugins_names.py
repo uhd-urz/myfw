@@ -24,7 +24,7 @@ class ExternalPluginLoaderDefinitions:
     typer_app_file_name: str = InternalPluginLoaderDefinitions.typer_app_file_name
     typer_app_var_name: str = InternalPluginLoaderDefinitions.typer_app_var_name
     file_name_prefix: str = "plugin_metadata"
-    file_ext: str = "yml"
+    file_ext: str = "toml"
     file_name: str = f"{file_name_prefix}.{file_ext}"
 
 

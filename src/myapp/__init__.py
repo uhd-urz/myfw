@@ -35,5 +35,6 @@ LayerLoader.enable_bootstrap_mode(
 from .config import __hook__  # noqa: E402, F401
 
 # ──────────────────────────────────────────────────────────────
+from .loggers import __hook__  # noqa: E402, F401
 
 __all__ = []

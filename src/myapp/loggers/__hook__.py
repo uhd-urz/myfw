@@ -4,7 +4,9 @@
 # │ level__init__.py module, which will trigger/run all      │
 # │ imports in __init__.py. If you wish to avoid that, you   │
 # │ can remove this file before making sure that you import  │
-# │ your Pydantic configuration model directly inside the    │
-# │ box found in the top-most level __init__.py.             │
+# │ get_logger outside the box found in the top-most level   │
+# │ __init__.py. Calling get_logger early makes sure the     │
+# │ logger named '<your app>' is registered to Python's      │
+# │ logging so you can do `logging.getLogger("<your app>")`. │
 # │                                                          │
 # └──────────────────────────────────────────────────────────┘

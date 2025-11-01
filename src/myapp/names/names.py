@@ -8,9 +8,10 @@ from properpath import P
 from pydantic import BaseModel
 from rya.pre_utils import (
     ConfigFileTuple,
-    DefaultLoggerName,
     FileTupleContainer,
     LogFileTuple,
+    LoggerDefaults,
+    RunEarlyList,
     is_platform_unix,
 )
 
@@ -25,7 +26,8 @@ class AppIdentity(StrEnum):
     version_file_name = "VERSION"
 
 
-DefaultLoggerName.name = AppIdentity.app_name
+LoggerDefaults.logger_name = AppIdentity.app_name
+LoggerDefaults.will_cache_log_path = False
 
 app_dirs = P.platformdirs(
     appname=AppIdentity.app_name,
@@ -74,6 +76,8 @@ log_file_sinks.append(
         name="user log",
     )
 )
+
+run_early_list: RunEarlyList = RunEarlyList()
 
 
 # Cache file definitions

@@ -9,13 +9,18 @@ from .names import (
     cache_path,
     config_file_sources,
     log_file_sinks,
+    run_early_list
 )
 from .plugins_names import (
     ExternalPluginLoaderDefinitions,
     ExternalPluginMetadataDefinitions,
     InternalPluginLoaderDefinitions,
 )
-from .typer_names import TyperArgs, TyperGlobalOptions, TyperRichPanelNames
+from .typer_names import (
+    TyperArgs,
+    TyperGlobalOptions,
+    TyperRichPanelNames,
+)
 
 __all__ = [
     "AppIdentity",
@@ -34,4 +39,5 @@ __all__ = [
     "TyperArgs",
     "TyperRichPanelNames",
     "TyperGlobalOptions",
+    "run_early_list"
 ]

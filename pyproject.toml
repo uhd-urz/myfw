@@ -1,17 +1,18 @@
 [project]
 name = "myapp"
-version = "0.1.0"
+version = "0.1.1"
 requires-python = ">=3.12"
 dependencies = [
     "rya",
 ]
 readme = "README.md"
-[tool.uv.sources]
-rya = { git = "https://github.com/uhd-urz/rya" }
 
 [tool.uv.build-backend]
 module-name = "myapp"
 module-root = "src"
+
+[tool.uv.sources]
+rya = { git = "https://github.com/uhd-urz/rya" }
 
 [project.scripts]
 myapp = "myapp.cli.app:app"

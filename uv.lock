@@ -276,8 +276,8 @@ wheels = [
 
 [[package]]
 name = "rya"
-version = "0.2.18"
-source = { git = "https://github.com/uhd-urz/rya#91e12eec634d2383214f73de6df172a37dbdc3fd" }
+version = "0.2.19"
+source = { git = "https://github.com/uhd-urz/rya#f6d9caa388082136faeec63391daf19670938a04" }
 dependencies = [
     { name = "click" },
     { name = "colorama" },

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, Callable, Optional, Type
+from typing import Any, Callable, ClassVar, Literal, Optional, Type
 
 from pydantic import BaseModel, ConfigDict
 from typer.core import MarkupMode, TyperGroup
@@ -10,7 +10,7 @@ from .names import AppIdentity
 class TyperArgs(BaseModel, validate_assignment=True):
     model_config = ConfigDict(arbitrary_types_allowed=True)
     name: Optional[str] = None
-    cls: Optional[Type[TyperGroup]] = None
+    cls: Optional[Type[TyperGroup]] = None  # Modified
     invoke_without_command: bool = False
     no_args_is_help: bool = True  # Modified
     subcommand_metavar: Optional[str] = None
@@ -28,7 +28,7 @@ class TyperArgs(BaseModel, validate_assignment=True):
     deprecated: bool = False
     add_completion: bool = True
     # Rich settings
-    rich_markup_mode: MarkupMode = "markdown"  # Modified
+    rich_markup_mode: MarkupMode | Literal["rich-click"] = "markdown"  # Modified
     rich_help_panel: str | None = None
     suggest_commands: bool = True
     pretty_exceptions_enable: bool = True
@@ -38,9 +38,10 @@ class TyperArgs(BaseModel, validate_assignment=True):
 
 @dataclass
 class TyperRichPanelNames:
-    internal_plugins: str = "Built-in plugins"
-    external_plugins: str = "External plugins"
-    callback: str = f"{AppIdentity.app_fancy_name} global options"
+    internal_plugins: ClassVar[str] = "Built-in plugins"
+    external_plugins: ClassVar[str] = "External plugins"
+    messages: ClassVar[str] = "ⓘ Messages"
+    callback: ClassVar[str] = f"{AppIdentity.app_fancy_name} global options"
 
 
 @dataclass

@@ -19,11 +19,11 @@ from rya.pre_utils import (
 class AppIdentity(StrEnum):
     app_name = "myapp"
     app_fancy_name = "MyApp"
+    py_package_name = app_name
     log_file_name = f"{app_name}.log"
     config_file_extension = "toml"
     user_config_file_name = f"config.{config_file_extension}"
     project_config_file_name = f"{app_name}.{config_file_extension}"
-    version_file_name = "VERSION"
 
 
 LoggerDefaults.logger_name = AppIdentity.app_name

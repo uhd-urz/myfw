@@ -34,7 +34,12 @@ LayerLoader.enable_bootstrap_mode(
 # model directly here (and remove this line).
 from .config import __hook__  # noqa: E402, F401
 
-# ──────────────────────────────────────────────────────────────
+# The border
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# The following import calls get_logger. This makes sure when
+# the app is imported as a package "import <myapp>", it
+# automatically registers the main "myapp" logger to
+# Python's built-in logging.
 from .loggers import __hook__  # noqa: E402, F401
 
 __all__ = []

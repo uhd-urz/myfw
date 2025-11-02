@@ -1,4 +1,4 @@
-from rya.cli.app import app
+from rya.cli import app
 from rya.config import AppConfig
 
 from ..loggers import get_logger

@@ -15,7 +15,7 @@ module-root = "src"
 rya = { git = "https://github.com/uhd-urz/rya" }
 
 [project.scripts]
-myapp = "myapp.cli.app:app"
+myapp = "myapp.cli.__main__:app"
 
 [build-system]
 requires = ["uv_build>=0.7.19,<0.8.0"]

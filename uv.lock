@@ -95,7 +95,7 @@ wheels = [
 
 [[package]]
 name = "myapp"
-version = "0.1.1"
+version = "0.1.2"
 source = { editable = "." }
 dependencies = [
     { name = "rya" },
@@ -276,8 +276,8 @@ wheels = [
 
 [[package]]
 name = "rya"
-version = "0.2.19"
-source = { git = "https://github.com/uhd-urz/rya#f6d9caa388082136faeec63391daf19670938a04" }
+version = "0.2.20"
+source = { git = "https://github.com/uhd-urz/rya#76ac4142ce4d6a5ea20f4167a4df68dc220e7f2f" }
 dependencies = [
     { name = "click" },
     { name = "colorama" },

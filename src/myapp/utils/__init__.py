@@ -6,6 +6,7 @@ from rya.utils import (
     PythonVersionCheckFailed,
     add_message,
     check_reserved_keyword,
+    detected_click_feedback,
     generate_pydantic_model_from_abstract_cls,
     get_app_version,
     get_external_python_version,
@@ -35,5 +36,6 @@ __all__ = [
     "Missing",
     "messages_list",
     "generate_pydantic_model_from_abstract_cls",
-    "update_rich_click_cli_theme"
+    "update_rich_click_cli_theme",
+    "detected_click_feedback",
 ]

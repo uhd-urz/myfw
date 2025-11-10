@@ -64,7 +64,7 @@ wheels = [
 
 [[package]]
 name = "myapp"
-version = "0.1.6"
+version = "0.1.7"
 source = { editable = "." }
 dependencies = [
     { name = "rya" },
@@ -76,7 +76,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "rya", specifier = ">=0.2.24" }]
+requires-dist = [{ name = "rya", specifier = ">=0.2.29" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "mypy", specifier = ">=1.18.2" }]

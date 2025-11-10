@@ -1,9 +1,9 @@
 [project]
 name = "myapp"
-version = "0.1.6"
+version = "0.1.7"
 requires-python = ">=3.12"
 dependencies = [
-    "rya>=0.2.24",
+    "rya>=0.2.29",
 ]
 readme = "README.md"
 

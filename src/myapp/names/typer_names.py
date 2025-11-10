@@ -5,6 +5,12 @@ from pydantic import BaseModel, ConfigDict
 from typer.core import MarkupMode, TyperGroup
 
 from .names import AppIdentity
+from .plugins_names import (
+    ExternalPluginLoaderDefinitions as ExPdf,
+)
+from .plugins_names import (
+    InternalPluginLoaderDefinitions as InPdf,
+)
 
 
 class TyperArgs(BaseModel, validate_assignment=True):
@@ -38,8 +44,8 @@ class TyperArgs(BaseModel, validate_assignment=True):
 
 @dataclass
 class TyperRichPanelNames:
-    internal_plugins: ClassVar[str] = "Built-in plugins"
-    external_plugins: ClassVar[str] = "External plugins"
+    internal_plugins: ClassVar[str] = f"{InPdf.name.capitalize()} plugins"
+    external_plugins: ClassVar[str] = f"{ExPdf.name.capitalize()} plugins"
     messages: ClassVar[str] = "ⓘ Messages"
     callback: ClassVar[str] = f"{AppIdentity.app_fancy_name} global options"
 

@@ -18,12 +18,14 @@ class PluginDefinitions:
 
 @dataclass
 class InternalPluginLoaderDefinitions(PluginDefinitions):
+    name: ClassVar[str] = "built-in"
     directory_name: str = PublicLayerNames.plugins
     dir: P = P(__file__).parent.parent / directory_name
 
 
 @dataclass
 class ExternalPluginLoaderDefinitions(PluginDefinitions):
+    name: ClassVar[str] = "external"
     directory_name: str = PublicLayerNames.plugins
     dir: P = app_dirs.user_data_dir / directory_name
     file_name_prefix: str = "plugin_metadata"

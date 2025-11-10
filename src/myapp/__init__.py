@@ -29,6 +29,12 @@ LayerLoader.enable_bootstrap_mode(
     root_installation_dir=P(__file__).parent,
     app_name=AppIdentity.app_name,
 )
+# The following import calls get_logger. This makes sure when
+# the app is imported as a package "import <myapp>", it
+# automatically registers the main "myapp" logger to
+# Python's built-in logging.
+from .loggers import __hook__  # noqa: E402, F401, I001
+
 # The following triggers .config.__hook__ where the Pydantic
 # configuration model can be defined. You can also import your
 # model directly here (and remove this line).
@@ -36,10 +42,6 @@ from .config import __hook__  # noqa: E402, F401
 
 # The border
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# The following import calls get_logger. This makes sure when
-# the app is imported as a package "import <myapp>", it
-# automatically registers the main "myapp" logger to
-# Python's built-in logging.
-from .loggers import __hook__  # noqa: E402, F401
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 __all__ = []

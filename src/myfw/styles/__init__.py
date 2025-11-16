@@ -1,7 +1,6 @@
 from rya.styles import (
     BaseFormat,
     FormatError,
-    FormatInstantiator,
     color_text,
     get_formatter,
     make_noted_text,
@@ -17,7 +16,6 @@ __all__ = [
     "BaseFormat",
     "FormatError",
     "get_formatter",
-    "FormatInstantiator",
     "make_noted_text",
     "color_text",
     "print_typer_error",

@@ -30,8 +30,8 @@ LayerLoader.enable_bootstrap_mode(
     app_name=AppIdentity.app_name,
 )
 # The following import calls get_logger. This makes sure when
-# the app is imported as a package "import <myapp>", it
-# automatically registers the main "myapp" logger to
+# the app is imported as a package "import <myfw>", it
+# automatically registers the main "myfw" logger to
 # Python's built-in logging.
 from .loggers import __hook__  # noqa: E402, F401, I001
 

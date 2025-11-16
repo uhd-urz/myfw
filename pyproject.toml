@@ -1,18 +1,18 @@
 [project]
-name = "myapp"
+name = "myfw"
 version = "0.1.7"
 requires-python = ">=3.12"
 dependencies = [
-    "rya>=0.2.29",
+    "rya>=0.2.30",
 ]
 readme = "README.md"
 
 [tool.uv.build-backend]
-module-name = "myapp"
+module-name = "myfw"
 module-root = "src"
 
 [project.scripts]
-myapp = "myapp.cli.__main__:app"
+myfw = "myfw.cli.__main__:app"
 
 [build-system]
 requires = ["uv_build>=0.7.19,<0.8.0"]

@@ -17,8 +17,8 @@ from rya.pre_utils import (
 
 
 class AppIdentity(StrEnum):
-    app_name = "myapp"
-    app_fancy_name = "MyApp"
+    app_name = "myfw"
+    app_fancy_name = "myfw"
     pypi_name = app_name
     log_file_name = f"{app_name}.log"
     config_file_extension = "toml"
@@ -82,7 +82,7 @@ run_early_list: RunEarlyList = RunEarlyList()
 
 # Cache file definitions
 class CacheModel(BaseModel):
-    date: datetime
+    date: datetime = datetime.now()
     log_file_path: Optional[P] = None
 
 

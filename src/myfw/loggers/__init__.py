@@ -33,6 +33,6 @@ from rya.loggers.base import get_file_logger, get_main_logger
 from rya.loggers.handlers import AppFileHandler, AppFileHandlerArgs
 from rya.loggers.log_file import get_log_file_path
 
-# Calling get_logger ensures the main "myapp" logger
+# Calling get_logger ensures the main "myfw" logger
 # is registered to Python built-in logging.
 get_logger()

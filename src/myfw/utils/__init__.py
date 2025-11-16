@@ -16,7 +16,6 @@ from rya.utils import (
     global_cli_super_startup_callback,
     messages_list,
     update_kwargs_with_defaults,
-    update_rich_click_cli_theme,
 )
 
 __all__ = [
@@ -36,6 +35,5 @@ __all__ = [
     "Missing",
     "messages_list",
     "generate_pydantic_model_from_abstract_cls",
-    "update_rich_click_cli_theme",
     "detected_click_feedback",
 ]

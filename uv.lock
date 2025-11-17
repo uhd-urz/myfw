@@ -64,7 +64,7 @@ wheels = [
 
 [[package]]
 name = "myfw"
-version = "0.1.8"
+version = "0.1.9"
 source = { editable = "." }
 dependencies = [
     { name = "rya" },
@@ -76,7 +76,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "rya", specifier = ">=0.2.30" }]
+requires-dist = [{ name = "rya", specifier = ">=0.2.32" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "mypy", specifier = ">=1.18.2" }]

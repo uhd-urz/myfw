@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Secret
-from rya.config import ConfigMaker
 
 
 class ConfigModel(BaseModel):
@@ -9,4 +8,4 @@ class ConfigModel(BaseModel):
     api_token: Secret[str] = "555-2368"
 
 
-ConfigMaker.add_model(ConfigModel)
+# ConfigModel is registered in __pre_init__.register_config_model
